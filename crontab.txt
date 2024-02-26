@@ -1,1 +1,7 @@
-0 3 * * * /usr/bin/python3 /path/to/cleanup_files.py
+To run cleanup_files.py daily using crontab, you first need to open your crontab
+file for editing. You can do this by running crontab -e in your terminal. Then,
+add the following line to schedule the script to run once daily at a specific
+time (for example, at 3:07 AM).
+
+# Remove diagnostic jpg files in /tmp
+7 3 * * * /usr/bin/python3 /home/tennis/cat-doorbell-v2-jpg-cleanup/cleanup_files.py >> /tmp/jpg_cleanup.log 2>&1 &
